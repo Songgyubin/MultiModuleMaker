@@ -5,12 +5,21 @@
     <vendor>songgyubin</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+<!--    <depends>com.intellij.modules.androidstudio</depends>-->
+    <depends>org.jetbrains.kotlin</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.songgyubin.multimodulemaker.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
     </extensions>
+
+    <actions>
+        <group id="NewModuleGroup" text="New" popup="true">
+            <action id="MultiModuleAction" class="com.github.songgyubin.multimodulemaker.action.MultiModuleAction" text="Multi-Module" description="Create multiple Android library modules"/>
+        </group>
+    </actions>
 
     <applicationListeners>
         <listener class="com.github.songgyubin.multimodulemaker.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
