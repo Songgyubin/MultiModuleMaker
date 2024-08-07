@@ -3,3 +3,6 @@
 .intellijPlatform
 .qodana
 build
+# OS-specific files
+.DS_Store
+.DS_Store?
